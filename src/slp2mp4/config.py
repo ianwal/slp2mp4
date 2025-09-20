@@ -143,7 +143,7 @@ def get_default_config():
 
 
 def get_config():
-    return _load_configs([DEFAULT_CONFIG_FILE, USER_CONFIG_FILE])
+    return _load_configs([DEFAULT_CONFIG_FILE])
 
 
 def translate_and_validate_config(conf):

@@ -37,6 +37,7 @@ def make_dolphin_file(userdir: pathlib.Path):
             "AdapterRumble1": "False",
             "AdapterRumble2": "False",
             "AdapterRumble3": "False",
+            "EmulationSpeed": "0.00000000",  # Uncap playback speed to allow faster than realtime replays
         },
         # Enables dumping frames
         "Movie": {
@@ -67,6 +68,7 @@ def make_gfx_file(userdir: pathlib.Path, user_settings):
             "AspectRatio": "0",
             "InternalResolutionFrameDumps": "True",
         },
+        "Hardware": {"VSync": "False"},
     }
     util.update_dict(settings, user_settings)
     filename = userdir.joinpath("Config", "GFX.ini")

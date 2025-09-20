@@ -60,11 +60,12 @@ class FfmpegRunner:
             ),
             (
                 "-c:v",
-                "copy",
+                "libx264",
             ),
+            ("-vf", "scale=trunc(iw/2)*2:trunc(ih/2)*2"),
             (
-                "-b:v",
-                "7500k",  # TODO follow setting
+                "-crf",
+                "24",
             ),
             (
                 "-avoid_negative_ts",
